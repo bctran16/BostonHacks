@@ -9,6 +9,8 @@
 import UIKit
 import AVKit
 import Vision
+import AVFoundation
+
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate{
 //    let imagePicker = UIImagePickerController()
@@ -20,7 +22,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
+    let synthesizer  = AVSpeechSynthesizer()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -77,10 +79,19 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             
             print(firstObservation.identifier, firstObservation.confidence)
             
+
             DispatchQueue.main.async {
                 self.identifierLabel.text = "\(firstObservation.identifier) \(firstObservation.confidence * 100)"
+                if (firstObservation.confidence >= 0.8){
+                    
+                    let verbalization = "\(firstObservation.identifier)"
+                    let utterance = AVSpeechUtterance(string: verbalization)
+                    self.synthesizer.speak(utterance)
+                }
+                
             }
             
+        
         }
         
         try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
