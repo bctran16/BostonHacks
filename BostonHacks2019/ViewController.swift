@@ -10,16 +10,17 @@ import UIKit
 import AVKit
 import Vision
 
-class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
-    
+class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate{
+//    let imagePicker = UIImagePickerController()
     let identifierLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .white
         label.textAlignment = .center
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,7 +64,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         
         // !!!Important
         // make sure to go download the models at https://developer.apple.com/machine-learning/ scroll to the bottom
-        guard let model = try? VNCoreMLModel(for: MobileNet().model) else { return }
+        guard let model = try? VNCoreMLModel(for: Resnet50().model) else { return }
         let request = VNCoreMLRequest(model: model) { (finishedReq, err) in
             
             //perhaps check the err

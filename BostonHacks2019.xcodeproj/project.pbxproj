@@ -12,7 +12,7 @@
 		4D175691238079A100EDD967 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D17568F238079A100EDD967 /* Main.storyboard */; };
 		4D175693238079A300EDD967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D175692238079A300EDD967 /* Assets.xcassets */; };
 		4D175696238079A300EDD967 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D175694238079A300EDD967 /* LaunchScreen.storyboard */; };
-		A97667BB238089A100BE0455 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A97667BA238089A100BE0455 /* MobileNet.mlmodel */; };
+		A9E571E62380A86000E1B1A6 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A9E571E52380A86000E1B1A6 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -20,6 +20,8 @@
 			isa = PBXBuildRule;
 			compilerSpec = com.apple.xcode.tools.swift.compiler;
 			fileType = file.mlmodel;
+			inputFiles = (
+			);
 			isEditable = 1;
 			outputFiles = (
 			);
@@ -35,7 +37,7 @@
 		4D175692238079A300EDD967 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D175695238079A300EDD967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D175697238079A300EDD967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A97667BA238089A100BE0455 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
+		A9E571E52380A86000E1B1A6 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +73,7 @@
 				4D175689238079A100EDD967 /* AppDelegate.swift */,
 				4D17568D238079A100EDD967 /* ViewController.swift */,
 				4D17568F238079A100EDD967 /* Main.storyboard */,
-				A97667BA238089A100BE0455 /* MobileNet.mlmodel */,
+				A9E571E52380A86000E1B1A6 /* Resnet50.mlmodel */,
 				4D175692238079A300EDD967 /* Assets.xcassets */,
 				4D175694238079A300EDD967 /* LaunchScreen.storyboard */,
 				4D175697238079A300EDD967 /* Info.plist */,
@@ -151,8 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A97667BB238089A100BE0455 /* MobileNet.mlmodel in Sources */,
 				4D17568E238079A100EDD967 /* ViewController.swift in Sources */,
+				A9E571E62380A86000E1B1A6 /* Resnet50.mlmodel in Sources */,
 				4D17568A238079A100EDD967 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
