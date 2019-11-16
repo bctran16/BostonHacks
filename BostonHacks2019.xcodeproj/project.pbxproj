@@ -8,22 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		4D17568A238079A100EDD967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D175689238079A100EDD967 /* AppDelegate.swift */; };
-		4D17568C238079A100EDD967 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17568B238079A100EDD967 /* SceneDelegate.swift */; };
 		4D17568E238079A100EDD967 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17568D238079A100EDD967 /* ViewController.swift */; };
 		4D175691238079A100EDD967 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D17568F238079A100EDD967 /* Main.storyboard */; };
 		4D175693238079A300EDD967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D175692238079A300EDD967 /* Assets.xcassets */; };
 		4D175696238079A300EDD967 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D175694238079A300EDD967 /* LaunchScreen.storyboard */; };
+		A97667BB238089A100BE0455 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A97667BA238089A100BE0455 /* MobileNet.mlmodel */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		A97667BC238089D800BE0455 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.xcode.tools.swift.compiler;
+			fileType = file.mlmodel;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# coremlc\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
 		4D175686238079A100EDD967 /* BostonHacks2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BostonHacks2019.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D175689238079A100EDD967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4D17568B238079A100EDD967 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4D17568D238079A100EDD967 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4D175690238079A100EDD967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D175692238079A300EDD967 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D175695238079A300EDD967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D175697238079A300EDD967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A97667BA238089A100BE0455 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +69,9 @@
 			isa = PBXGroup;
 			children = (
 				4D175689238079A100EDD967 /* AppDelegate.swift */,
-				4D17568B238079A100EDD967 /* SceneDelegate.swift */,
 				4D17568D238079A100EDD967 /* ViewController.swift */,
 				4D17568F238079A100EDD967 /* Main.storyboard */,
+				A97667BA238089A100BE0455 /* MobileNet.mlmodel */,
 				4D175692238079A300EDD967 /* Assets.xcassets */,
 				4D175694238079A300EDD967 /* LaunchScreen.storyboard */,
 				4D175697238079A300EDD967 /* Info.plist */,
@@ -79,6 +91,7 @@
 				4D175684238079A100EDD967 /* Resources */,
 			);
 			buildRules = (
+				A97667BC238089D800BE0455 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -138,9 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A97667BB238089A100BE0455 /* MobileNet.mlmodel in Sources */,
 				4D17568E238079A100EDD967 /* ViewController.swift in Sources */,
 				4D17568A238079A100EDD967 /* AppDelegate.swift in Sources */,
-				4D17568C238079A100EDD967 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,15 +297,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4AU2ZNQC3Y;
+				DEVELOPMENT_TEAM = 66P3H8V5B9;
 				INFOPLIST_FILE = BostonHacks2019/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Haya.BostonHacks2019;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,15 +318,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4AU2ZNQC3Y;
+				DEVELOPMENT_TEAM = 66P3H8V5B9;
 				INFOPLIST_FILE = BostonHacks2019/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Haya.BostonHacks2019;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
