@@ -24,27 +24,42 @@
                                     <action selector="chooseImage:" destination="YMV-8Y-ny3" eventType="touchUpInside" id="F6Z-lu-74H"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BiT-Al-5Fo">
-                                <rect key="frame" x="39" y="132" width="336" height="241"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIa-ds-Ar9">
-                                <rect key="frame" x="165" y="541" width="85" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UIa-ds-Ar9">
+                                <rect key="frame" x="163" y="693" width="88.5" height="18"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BiT-Al-5Fo">
+                                <rect key="frame" x="0.0" y="125" width="414" height="521"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cov-qh-EYB">
+                                <rect key="frame" x="40" y="84" width="40" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="URm-lV-AgZ" kind="presentation" modalPresentationStyle="fullScreen" id="UMu-aG-BhR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="cov-qh-EYB" firstAttribute="leading" secondItem="4SO-Vr-BUh" secondAttribute="leading" constant="40" id="1bH-IS-xdd"/>
+                            <constraint firstItem="BiT-Al-5Fo" firstAttribute="leading" secondItem="hHJ-cb-GmE" secondAttribute="leading" id="8bx-Kk-hRa"/>
                             <constraint firstItem="lCL-os-hpg" firstAttribute="centerX" secondItem="hHJ-cb-GmE" secondAttribute="centerX" id="ANL-Dg-k9J"/>
+                            <constraint firstItem="cov-qh-EYB" firstAttribute="top" secondItem="4SO-Vr-BUh" secondAttribute="top" constant="40" id="GfJ-jF-Itw"/>
                             <constraint firstItem="4SO-Vr-BUh" firstAttribute="bottom" secondItem="lCL-os-hpg" secondAttribute="bottom" constant="50" id="O1V-05-3gI"/>
+                            <constraint firstAttribute="trailing" secondItem="BiT-Al-5Fo" secondAttribute="trailing" id="a5v-rq-fWC"/>
+                            <constraint firstItem="BiT-Al-5Fo" firstAttribute="top" secondItem="hHJ-cb-GmE" secondAttribute="top" constant="125" id="an4-7G-aDn"/>
+                            <constraint firstItem="lCL-os-hpg" firstAttribute="top" secondItem="UIa-ds-Ar9" secondAttribute="bottom" constant="50" id="c3H-da-Jck"/>
+                            <constraint firstItem="UIa-ds-Ar9" firstAttribute="centerX" secondItem="hHJ-cb-GmE" secondAttribute="centerX" id="tPf-Rd-fhm"/>
+                            <constraint firstAttribute="bottom" secondItem="BiT-Al-5Fo" secondAttribute="bottom" constant="250" id="xHf-fc-YpF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4SO-Vr-BUh"/>
                     </view>
                     <connections>
-                        <outlet property="classificationLabel" destination="UIa-ds-Ar9" id="2P7-pN-C9D"/>
+                        <outlet property="classificationLabel" destination="UIa-ds-Ar9" id="MIJ-1R-bny"/>
                         <outlet property="imageView" destination="BiT-Al-5Fo" id="Py1-9O-f2S"/>
                     </connections>
                 </viewController>
@@ -60,8 +75,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="5r6-qp-CQh">
-                                <rect key="frame" x="24.5" y="739" width="365" height="48"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="86" translatesAutoresizingMaskIntoConstraints="NO" id="5r6-qp-CQh">
+                                <rect key="frame" x="31.5" y="739" width="351" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dV-eb-5OG">
                                         <rect key="frame" x="0.0" y="0.0" width="104" height="48"/>
@@ -72,7 +87,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQG-Xs-2ZC">
-                                        <rect key="frame" x="204" y="0.0" width="161" height="48"/>
+                                        <rect key="frame" x="190" y="0.0" width="161" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Live Camera"/>
                                         <connections>

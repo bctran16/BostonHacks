@@ -10,12 +10,17 @@ import UIKit
 import CoreML
 import Vision
 import ImageIO
+import AVFoundation
 
 
 class ViewControllers2: UIViewController {
 
+    
+   
     @IBOutlet weak var classificationLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    
+    let synthesizer  = AVSpeechSynthesizer()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,8 +29,8 @@ class ViewControllers2: UIViewController {
     
     
     func detectImageContent(){
-        
     }
+    
     lazy var classificationRequest: VNCoreMLRequest = {
         do {
             /*
@@ -65,10 +70,14 @@ class ViewControllers2: UIViewController {
                 // Display top classifications ranked by confidence in the UI.
                 let topClassifications = classifications.prefix(2)
                 let descriptions = topClassifications.map { classification in
-                    // Formats the classification for display; e.g. "(0.37) cliff, drop, drop-off".
-                   return String(format: "  (%.2f) %@", classification.confidence, classification.identifier)
+                    // Formats the classification for display; e.g. "(0.37) cliff, drop, drop-o;ff".
+                    return String(format : "%@", classification.identifier)
                 }
-                self.classificationLabel.text = "Classification:\n" + descriptions.joined(separator: "\n")
+                self.classificationLabel.adjustsFontSizeToFitWidth = true
+                self.classificationLabel.text = descriptions.joined(separator: "\n")
+                self.speech(text: classifications.first!.identifier)
+            
+                
             }
         }
     }
@@ -106,17 +115,26 @@ class ViewControllers2: UIViewController {
         }
             photoSourcePicker.addAction(choosePhoto)
             photoSourcePicker.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
             
             present(photoSourcePicker, animated: true)
         }
+    
     func presentPhotoPicker(sourceType: UIImagePickerController.SourceType) {
         let picker = UIImagePickerController()
-        picker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        picker.delegate = self// as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
         picker.sourceType = sourceType
-        present(picker, animated: true)
+        self.present(picker, animated: true)
         imageView.image = picker as? UIImage
         print("present photo picker being called")
     }
+    
+    func speech(text:String){
+          let utterance = AVSpeechUtterance(string: text)
+          self.synthesizer.speak(utterance)
+      }
+
+    
 //     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
 //        picker.dismiss(animated: true)
 //        print("image control picker being called")
@@ -127,20 +145,20 @@ class ViewControllers2: UIViewController {
 //        imageView.image = selectedImage
 //        updateClassifications(for: selectedImage)
 //        }
-    
+//
     }
 extension ViewControllers2: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 // MARK: - Handling Image Picker Selection
 
-func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
-    picker.dismiss(animated: true)
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     print("image control picker being called")
+    picker.dismiss(animated: true)
+
     // We always expect `imagePickerController(:didFinishPickingMediaWithInfo:)` to supply the original image.
-    let image = info[UIImagePickerController.InfoKey.originalImage.rawValue] as! UIImage
+    let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
     imageView.image = image
     updateClassifications(for: image)
 }
-    
 
 
     /*
