@@ -58,6 +58,9 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         identifierLabel.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         identifierLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
+    //google translate
+        
+
     func speech(text:String){
         let utterance = AVSpeechUtterance(string: text)
         self.synthesizer.speak(utterance)
@@ -67,6 +70,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     var name: String = "" {
         didSet {
             self.speech(text: name)
+            
         }
     }
     
@@ -94,6 +98,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                 self.identifierLabel.text = "\(firstObservation.identifier) \(firstObservation.confidence * 100)"
                 if (firstObservation.confidence >= 0.5 && firstObservation.identifier != self.name){
                     self.name = firstObservation.identifier
+
                 }
                 
             }
