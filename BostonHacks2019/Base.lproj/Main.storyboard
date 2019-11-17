@@ -72,11 +72,11 @@
             <objects>
                 <viewController id="URm-lV-AgZ" customClass="Starter" customModule="BostonHacks2019" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k4w-FJ-kNv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="86" translatesAutoresizingMaskIntoConstraints="NO" id="5r6-qp-CQh">
-                                <rect key="frame" x="31.5" y="739" width="351" height="48"/>
+                                <rect key="frame" x="31.5" y="685" width="351" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dV-eb-5OG">
                                         <rect key="frame" x="0.0" y="0.0" width="104" height="48"/>
@@ -116,7 +116,28 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="492-MC-vKB">
+                                <rect key="frame" x="182.5" y="54" width="49" height="30"/>
+                                <state key="normal" title="Repeat"/>
+                                <connections>
+                                    <action selector="Repeat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0vV-eN-J1p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AS-Ij-1Cr">
+                                <rect key="frame" x="26" y="54" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="URm-lV-AgZ" kind="presentation" id="Rvl-ix-yQj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="492-MC-vKB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="BWh-uQ-gf5"/>
+                            <constraint firstItem="492-MC-vKB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GXq-BX-0Qm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="WC5-ez-LfM"/>
@@ -126,4 +147,7 @@
             <point key="canvasLocation" x="405.79710144927537" y="189.50892857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Rvl-ix-yQj"/>
+    </inferredMetricsTieBreakers>
 </document>

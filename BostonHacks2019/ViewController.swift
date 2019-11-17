@@ -103,5 +103,9 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         
         try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
     }
+    @IBAction func Repeat(_ sender: Any) {
+        self.speech(text: name)
+    }
+    
     
 }
