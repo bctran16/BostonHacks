@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.70783131401943178" green="0.74179810906217658" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cov-qh-EYB" firstAttribute="leading" secondItem="4SO-Vr-BUh" secondAttribute="leading" constant="40" id="1bH-IS-xdd"/>
                             <constraint firstItem="BiT-Al-5Fo" firstAttribute="leading" secondItem="hHJ-cb-GmE" secondAttribute="leading" id="8bx-Kk-hRa"/>
@@ -72,11 +72,11 @@
             <objects>
                 <viewController id="URm-lV-AgZ" customClass="Starter" customModule="BostonHacks2019" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k4w-FJ-kNv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="86" translatesAutoresizingMaskIntoConstraints="NO" id="5r6-qp-CQh">
-                                <rect key="frame" x="31.5" y="685" width="351" height="48"/>
+                                <rect key="frame" x="31.5" y="739" width="351" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dV-eb-5OG">
                                         <rect key="frame" x="0.0" y="0.0" width="104" height="48"/>
@@ -97,7 +97,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.633183365196616" green="0.9718272196741905" blue="0.98039215690000003" alpha="0.89807988556338025" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GFf-M3-zfF" firstAttribute="bottom" secondItem="5r6-qp-CQh" secondAttribute="bottom" constant="75" id="EJX-sn-wfo"/>
                             <constraint firstItem="5r6-qp-CQh" firstAttribute="centerX" secondItem="k4w-FJ-kNv" secondAttribute="centerX" id="OVT-Wv-Z47"/>
@@ -124,19 +124,20 @@
                                     <action selector="Repeat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0vV-eN-J1p"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AS-Ij-1Cr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AS-Ij-1Cr">
                                 <rect key="frame" x="26" y="54" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="URm-lV-AgZ" kind="presentation" id="Rvl-ix-yQj"/>
+                                    <segue destination="URm-lV-AgZ" kind="presentation" modalPresentationStyle="fullScreen" id="Rvl-ix-yQj"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.68943084627165319" green="1" blue="0.77662372968004645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="1AS-Ij-1Cr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="7My-v1-4Tq"/>
                             <constraint firstItem="492-MC-vKB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="BWh-uQ-gf5"/>
                             <constraint firstItem="492-MC-vKB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GXq-BX-0Qm"/>
+                            <constraint firstItem="1AS-Ij-1Cr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="KTs-CR-Lzx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
