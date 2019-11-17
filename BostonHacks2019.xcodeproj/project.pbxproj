@@ -13,6 +13,7 @@
 		4D175693238079A300EDD967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D175692238079A300EDD967 /* Assets.xcassets */; };
 		4D175696238079A300EDD967 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D175694238079A300EDD967 /* LaunchScreen.storyboard */; };
 		4D1756E22380F4E100EDD967 /* Starter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1756E12380F4E100EDD967 /* Starter.swift */; };
+		4D1756E42380FC8100EDD967 /* ViewControllers2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1756E32380FC8100EDD967 /* ViewControllers2.swift */; };
 		A9E571E62380A86000E1B1A6 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A9E571E52380A86000E1B1A6 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		4D175695238079A300EDD967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D175697238079A300EDD967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D1756E12380F4E100EDD967 /* Starter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starter.swift; sourceTree = "<group>"; };
+		4D1756E32380FC8100EDD967 /* ViewControllers2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers2.swift; sourceTree = "<group>"; };
 		A9E571E52380A86000E1B1A6 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 				4D175689238079A100EDD967 /* AppDelegate.swift */,
 				4D1756E12380F4E100EDD967 /* Starter.swift */,
 				4D17568D238079A100EDD967 /* ViewController.swift */,
+				4D1756E32380FC8100EDD967 /* ViewControllers2.swift */,
 				4D17568F238079A100EDD967 /* Main.storyboard */,
 				A9E571E52380A86000E1B1A6 /* Resnet50.mlmodel */,
 				4D175692238079A300EDD967 /* Assets.xcassets */,
@@ -159,6 +162,7 @@
 				4D17568E238079A100EDD967 /* ViewController.swift in Sources */,
 				4D1756E22380F4E100EDD967 /* Starter.swift in Sources */,
 				A9E571E62380A86000E1B1A6 /* Resnet50.mlmodel in Sources */,
+				4D1756E42380FC8100EDD967 /* ViewControllers2.swift in Sources */,
 				4D17568A238079A100EDD967 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

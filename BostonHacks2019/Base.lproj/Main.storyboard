@@ -8,6 +8,50 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controllers2-->
+        <scene sceneID="xtp-X4-IIQ">
+            <objects>
+                <viewController id="YMV-8Y-ny3" customClass="ViewControllers2" customModule="BostonHacks2019" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hHJ-cb-GmE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCL-os-hpg">
+                                <rect key="frame" x="107.5" y="761" width="199" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Choose Image"/>
+                                <connections>
+                                    <action selector="chooseImage:" destination="YMV-8Y-ny3" eventType="touchUpInside" id="F6Z-lu-74H"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BiT-Al-5Fo">
+                                <rect key="frame" x="39" y="132" width="336" height="241"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIa-ds-Ar9">
+                                <rect key="frame" x="165" y="541" width="85" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lCL-os-hpg" firstAttribute="centerX" secondItem="hHJ-cb-GmE" secondAttribute="centerX" id="ANL-Dg-k9J"/>
+                            <constraint firstItem="4SO-Vr-BUh" firstAttribute="bottom" secondItem="lCL-os-hpg" secondAttribute="bottom" constant="50" id="O1V-05-3gI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4SO-Vr-BUh"/>
+                    </view>
+                    <connections>
+                        <outlet property="classificationLabel" destination="UIa-ds-Ar9" id="2P7-pN-C9D"/>
+                        <outlet property="imageView" destination="BiT-Al-5Fo" id="Py1-9O-f2S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a6h-vj-d8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1379.7101449275362" y="187.5"/>
+        </scene>
         <!--Starter-->
         <scene sceneID="YPX-C2-3eV">
             <objects>
@@ -23,6 +67,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="104" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Capture"/>
+                                        <connections>
+                                            <segue destination="YMV-8Y-ny3" kind="presentation" modalPresentationStyle="fullScreen" id="zfU-Mg-u7R"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQG-Xs-2ZC">
                                         <rect key="frame" x="204" y="0.0" width="161" height="48"/>
